@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import getCharacters from './getCharacters';
+import { getCharacters } from '../../services/getCharacters';
 
 const CharacterList = () => {
 
-  const [characters] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     getCharacters()
-      .then(newCharacters => characters(newCharacters));
+      .then(newCharacters => setCharacters(newCharacters));
 
   }, []);
 
