@@ -2,7 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Link
 } from 'react-router-dom';
 import CharacterList from '../../containers/CharacterList/CharacterList';
 import CharacterDetails from '../../containers/CharacterDetails/CharacterDetails';
@@ -15,6 +16,7 @@ export default function App() {
         <img className="imgLogo" src="main.png"/>
       </header>
       <Router>
+        <Link to="/">HOME</Link>
         <Switch>
           <Route exact path="/details/:charName" component={CharacterDetails}/>
           <Route exact path="/" component={CharacterList} />
