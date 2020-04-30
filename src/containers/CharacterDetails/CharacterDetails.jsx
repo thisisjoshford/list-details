@@ -5,14 +5,14 @@ import { useParams } from 'react-router-dom';
 const CharacterDetails = () => {
 
   const [character, setCharacter] = useState([]);
-  let { charName } = useParams();
 
+  let { charName } = useParams();
+  
   useEffect(() => {
     getCharacter(charName)
       .then(newCharacter => setCharacter(newCharacter[0]));
   }, []);
 
-  console.log(character);
   return (
     <>
       <h2>{character.Name}</h2>
