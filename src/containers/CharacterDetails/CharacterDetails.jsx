@@ -9,14 +9,24 @@ const CharacterDetails = () => {
 
   useEffect(() => {
     getCharacter(charName)
-      .then(newCharacter => setCharacter(newCharacter));
-
+      .then(newCharacter => setCharacter(newCharacter[0]));
   }, []);
 
   console.log(character);
-
   return (
     <>
+      <h2>{character.Name}</h2>
+      <img src={character.PicUrl}/>
+      <ul>
+        <li>{character.Species}</li>
+        <li>{character.Age}</li>
+        <li>{character.Planet}</li>
+        <li>{character.Profession}</li>
+        <li>{character.Status}</li>
+        <li>{character.FirstAppearance}</li>
+        <li>{character.Relatives}</li>
+        <li>{character.VoicedBy}</li>
+      </ul>
     </>
   );
 };
