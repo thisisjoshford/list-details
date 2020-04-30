@@ -16,7 +16,7 @@ export default function App() {
       </header>
       <Router>
         <Switch>
-          {/* <Route exact path="/details/:charName" component={CharacterDetails}/> */}
+          <Route exact path="/details/:charName" component={CharacterDetails}/>
           <Route exact path="/" component={CharacterList} />
         </Switch>
       </Router>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getCharacters } from '../../services/getCharacters';
+import { Link } from 'react-router-dom';
 
 const CharacterList = () => {
 
@@ -20,6 +21,7 @@ const CharacterList = () => {
             alt={`a sweet pic of ${char.Name}`}
           />           
           <h2 className="charName">{char.Name}</h2>
+          <Link to={`/details/${char.Name}`}>More Info</Link>
         </div>
       )
       }
