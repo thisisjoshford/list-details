@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { getCharacters } from '../../services/getCharacters';
-import { Link } from 'react-router-dom';
+import { getCharacter } from '../../services/getCharacters';
+import { useParams } from 'react-router-dom';
 
 const CharacterDetails = () => {
 
   const [character, setCharacter] = useState([]);
+  let { charName } = useParams();
 
   useEffect(() => {
-    getCharacters()
-      .then(newCharacters => setCharacters(newCharacters));
+    getCharacter(charName)
+      .then(newCharacter => setCharacter(newCharacter));
 
   }, []);
+
+  console.log(character);
 
   return (
     <>

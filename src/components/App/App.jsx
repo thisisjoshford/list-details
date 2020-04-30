@@ -4,8 +4,8 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import CharacterList from '../../containers/CharacterList/CharacterList.jsx';
-// import CharacterDetails from '../../containers/CharacterDetails';
+import CharacterList from '../../containers/CharacterList/CharacterList';
+import CharacterDetails from '../../containers/CharacterDetails/CharacterDetails';
 import './App.css';
 
 export default function App() {
